@@ -2,6 +2,8 @@
 
 edit video into 10 minutes chunks
 
+put video into `inputFile` folder, get video chunks in `outputFile` folder
+
 ## Requirement:
 
 - install yarn
@@ -14,6 +16,9 @@ edit video into 10 minutes chunks
 // run js
 $ yarn run edit-video
 
-// run bash
+// run shell script
 $ sh edit-video.sh
+
+// clear input/output file
+$ yarn run clear
 ```

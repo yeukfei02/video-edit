@@ -1,9 +1,12 @@
 const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const ffmpeg = require("fluent-ffmpeg");
-ffmpeg.setFfmpegPath(ffmpegPath);
 
+const { getVideoDurationInSeconds } = require("get-video-duration");
+const moment = require("moment");
 const fs = require("fs");
 const path = require("path");
+
+ffmpeg.setFfmpegPath(ffmpegPath);
 
 const inputDir = "./inputFile";
 const outDir = "./outputFile";
@@ -18,11 +21,11 @@ fs.readdirSync("./inputFile").forEach(async (file) => {
   console.log("file = ", file);
 
   const fileName = path.parse(file).name;
-  const extension = path.extname(file);
+  const fileExtension = path.extname(file);
   console.log("fileName = ", fileName);
-  console.log("extension = ", extension);
+  console.log("fileExtension = ", fileExtension);
 
-  if (extension && extension !== ".mp4") {
+  if (fileExtension && fileExtension !== ".mp4") {
     await convertVideoFormat(file, fileName);
   }
 
@@ -46,14 +49,24 @@ async function convertVideoFormat(file, fileName) {
 async function videoEdit(file) {
   const inputFile = `./inputFile/${file}`;
 
-  const timeList = [
-    "00:00:00",
-    "00:10:00",
-    "00:20:00",
-    "00:30:00",
-    "00:40:00",
-    "00:50:00",
-  ];
+  const videoDuration = await getVideoDurationInSeconds(inputFile);
+  console.log("videoDuration = ", videoDuration);
+
+  const totalMinutes = Math.floor(videoDuration / 60);
+  console.log("totalMinutes = ", totalMinutes);
+
+  let timeList = [];
+  const loopTimes = totalMinutes / 10;
+
+  let item = moment().startOf("day");
+  for (let index = 0; index < loopTimes; index++) {
+    if (index > 0) {
+      item = moment(item).add(10, "minutes");
+    }
+
+    timeList.push(moment(item).format("HH:mm:ss"));
+  }
+  console.log("timeList = ", timeList);
 
   // in second
   const duration = "600";
