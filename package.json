@@ -1,0 +1,22 @@
+{
+  "name": "video-edit",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/yeukfei02/video-edit.git",
+  "author": "Donald Wu <yeukfei02@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "fluent-ffmpeg": "^2.1.2",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "git-cz": "^4.7.6",
+    "standard-version": "^9.1.0"
+  },
+  "scripts": {
+    "edit-video": "nodemon app.js",
+    "commit": "git-cz",
+    "release": "standard-version"
+  }
+}
