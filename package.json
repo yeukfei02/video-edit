@@ -7,10 +7,18 @@
   "license": "MIT",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "bug-killer": "^4.4.4",
+    "dotenv": "^8.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "get-video-duration": "^3.0.2",
+    "googleapis": "^67.0.0",
+    "lien": "^3.3.1",
     "moment": "^2.29.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "opn": "^6.0.0",
+    "pretty-bytes": "^5.5.0",
+    "r-json": "^1.2.10",
+    "youtube-api": "^3.0.1"
   },
   "devDependencies": {
     "git-cz": "^4.7.6",
@@ -18,6 +26,7 @@
   },
   "scripts": {
     "edit-video": "nodemon app.js",
+    "upload-to-youtube": "node uploadToYoutube.js",
     "commit": "git-cz",
     "release": "standard-version",
     "clear": "rm -rf outputFile && rm -rf inputFile/*"

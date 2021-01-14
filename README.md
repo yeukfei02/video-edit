@@ -16,6 +16,9 @@ put video into `inputFile` folder, get video chunks in `outputFile` folder
 // run js
 $ yarn run edit-video
 
+// upload to youtube
+$ yarn run upload-to-youtube
+
 // run shell script
 $ sh edit-video.sh
 
