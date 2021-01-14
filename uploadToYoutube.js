@@ -33,6 +33,7 @@ opn(
 getChannelStatus();
 getChannelVideoList();
 
+// upload youtube
 server.addPage("/oauth2callback", (lien) => {
   Logger.log(
     "Trying to get the token using the following code = " + lien.query.code
