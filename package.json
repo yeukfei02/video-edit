@@ -26,6 +26,7 @@
   },
   "scripts": {
     "edit-video": "nodemon app.js",
+    "upload-to-youtube": "node uploadToYoutube.js",
     "commit": "git-cz",
     "release": "standard-version",
     "clear": "rm -rf outputFile && rm -rf inputFile/*"
