@@ -1,3 +1,6 @@
+const env = require("dotenv");
+env.config();
+
 const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const ffmpeg = require("fluent-ffmpeg");
 
@@ -17,6 +20,7 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir);
 }
 
+// inputFile
 fs.readdirSync("./inputFile").forEach(async (file) => {
   console.log("file = ", file);
 
