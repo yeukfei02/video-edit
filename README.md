@@ -1,6 +1,6 @@
 # video-edit
 
-edit video into 10 minutes chunks
+edit video into 10 minutes chunks, and upload to youtube
 
 put video into `inputFile` folder, get video chunks in `outputFile` folder
 
@@ -13,10 +13,10 @@ put video into `inputFile` folder, get video chunks in `outputFile` folder
 ## Testing and run:
 
 ```
-// run js
+// run js (edit video into 10 minutes chunks, and upload to youtube)
 $ yarn run edit-video
 
-// run shell script
+// run shell script (only edit video into 10 minutes chunks)
 $ sh edit-video.sh
 
 // clear input/output file
