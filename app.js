@@ -1,6 +1,3 @@
-const env = require("dotenv");
-env.config();
-
 const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const ffmpeg = require("fluent-ffmpeg");
 
