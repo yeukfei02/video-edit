@@ -1,3 +1,6 @@
+const env = require("dotenv");
+env.config();
+
 const fs = require("fs");
 const { google } = require("googleapis");
 const Youtube = require("youtube-api");
