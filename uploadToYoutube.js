@@ -112,8 +112,8 @@ function uploadVideoToYoutube(file, index) {
     {
       resource: {
         snippet: {
-          title: `Minecraft gameplay - part ${index}`,
-          description: `Minecraft gameplay - part ${index}`,
+          title: `video output - part ${index}`,
+          description: `video output - part ${index}`,
         },
         status: {
           privacyStatus: "public",
