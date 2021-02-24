@@ -18,6 +18,7 @@
     "opn": "^6.0.0",
     "pretty-bytes": "^5.5.0",
     "r-json": "^1.2.10",
+    "rimraf": "^3.0.2",
     "youtube-api": "^3.0.1"
   },
   "devDependencies": {
@@ -29,6 +30,6 @@
     "upload-to-youtube": "node uploadToYoutube.js",
     "commit": "git-cz",
     "release": "standard-version",
-    "clear": "rm -rf outputFile && rm -rf inputFile/*"
+    "clear": "rimraf outputFile && rimraf inputFile/*"
   }
 }
