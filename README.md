@@ -4,15 +4,15 @@ edit video into 10 minutes chunks
 
 put video into `inputFile` folder, get video chunks in `outputFile` folder
 
-## Requirement:
+## Requirement
 
 - install yarn
 - install node (v12+)
 - install ffmpeg
 
-## Testing and run:
+## Testing and run
 
-```
+```zsh
 // run js
 $ yarn run edit-video
 
